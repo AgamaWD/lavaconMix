@@ -1,0 +1,192 @@
+body {
+   color: rgb(82, 51, 0);
+}
+
+.content-wrap {
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: Amalfi, serif;
+    line-height: 0.6em;
+    height: 1.43em;
+}
+
+.text {
+  font-family: 'Gotham Pro Regular', sans-serif;
+}
+
+.link,
+.link:visited {
+    color: rgb(82, 51, 0);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.link:hover, 
+.link:active {
+   color: rgb(221, 98, 19);
+   text-decoration: underline dotted;
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.header {
+    padding: 18px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.navigation, .menu, .wrap-for-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item:not(:first-child) {
+  margin-left: 40px;
+}
+
+.submenu-btn {
+    position: relative;
+    color: rgb(82, 51, 0);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.submenu-content {
+  position: absolute;
+  display: none;
+}
+
+.submenu-item {
+  margin-top: 10px;
+}
+
+.submenu:hover .submenu-content {
+  display: block;
+}
+
+.submenu-content a:hover {
+    text-decoration: none;
+  }
+
+
+.phone {
+    font-family: 'Gotham Pro Bold';
+    font-size: 18px;
+}
+
+.search-btn {
+    background: url("../img/search.png") no-repeat center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    margin-left: 24px;
+}
+
+.main-block {
+    background-color: rgb(248, 244, 239);
+}
+
+.main-section {
+    background: url('../img/top-bg.png') no-repeat;
+    background-size: 100% 100%;
+    padding: 110px 0 110px;
+    position: relative;
+}
+
+.main-title {
+    font-size: 130px;
+}
+
+.subtitle {
+    margin-top: 27px;
+    font-family: 'Century Gothic', serif;
+    font-size: 20px;
+}
+
+.premises {
+    justify-content: start;
+    margin-top: 61px;
+}
+
+.premises-img {
+    width: 196px;
+}
+
+.premises-text {
+    margin-left: 28px;
+    width: 270px;
+}
+
+.promises-title {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.promises-text {
+    font-size: 14px;
+}
+
+.decor {
+  position: absolute;
+}
+
+.decor-1 {
+    top: -96px;
+    left: 48px;
+}
+
+.decor-2 {
+    top: 328px;
+    left: -184px;
+}
+
+.decor-4 {
+    top: 0;
+    right: 0;
+} 
+
+.about-section {
+    overflow: hidden;
+    padding: 70px 0;
+}
+
+.about-content {
+    width: 533px;
+    float: right;
+    margin-right: 89px;
+}
+
+.about-title {
+    font-size: 86px;
+    height: 2.14em;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 27px 0 47px;
+}
+
+.about-buttons {
+    justify-content: start;
+}
+
+.about-btn:not(:first-child) {
+    margin-left: 102px;
+}
+
+.about-btn-text {
+    font-size: 42px;
+    line-height: 100%;
+    margin-left: 20px;
+    height: 100%;
+}
