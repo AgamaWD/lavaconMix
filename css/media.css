@@ -52,9 +52,16 @@
     }
 
     .menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .menu-item {
@@ -62,7 +69,9 @@
     }
 
     .navigation>div {
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         margin-bottom: 30px;
     }
 
@@ -118,19 +127,33 @@
     }
 
     .navigation {
+        display: block;
         position: fixed;
         top: 0;
         right: 0;
         width: 100%;
-        min-height: 100%;
-        padding-top: 98px;
+        height: 0;
+        padding-top: 0;
         z-index: 10;
         background-color: rgb(255,255,255);
-        display: none;
+        overflow-y: scroll;
+        -webkit-transition-property: height, padding-top;
+        -o-transition-property: height, padding-top;
+        transition-property: height, padding-top;
+        -webkit-transition-duration: 800ms;
+             -o-transition-duration: 800ms;
+                transition-duration: 800ms;
     }
 
     .navigation.active {
-        display: block;
+        height: 100%;
+        padding-top: 98px;
+        -webkit-transition-property: height, padding-top;
+        -o-transition-property: height, padding-top;
+        transition-property: height, padding-top;
+        -webkit-transition-duration: 800ms;
+             -o-transition-duration: 800ms;
+                transition-duration: 800ms;
     }
 
     .navigation>div {
@@ -145,11 +168,20 @@
     }
 
     .search {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 23px 30px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .search-input  {
@@ -173,19 +205,84 @@
 
     .plus {
         display: block;
+        -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+                transform: rotate(0);
+        -webkit-transition: 2s;
+        -o-transition: 2s;
+        transition: 2s;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        -o-transition-property: transform;
+        transition-property: transform;
+        transition-property: transform, -webkit-transform;
+        -webkit-transition-duration: 950ms;
+             -o-transition-duration: 950ms;
+                transition-duration: 950ms
     }
 
-    .submenu-content  {
-        position: relative;
-        margin-top: 25px;
-        padding: 30px 0px 30px 30px;
+    .plus.active {
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        -o-transition-property: transform;
+        transition-property: transform;
+        transition-property: transform, -webkit-transform;
+        -webkit-transition-duration: 950ms;
+             -o-transition-duration: 950ms;
+                transition-duration: 950ms;
     }
+
+    .submenu-content {
+        position: relative;
+        height: 0;
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 30px;
+        padding-bottom: 0;
+        opacity: 0;
+        -webkit-transition-property: height, margin-top, padding-top, padding-bottom, opacity;
+        -o-transition-property: height, margin-top, padding-top, padding-bottom, opacity;
+        transition-property: height, margin-top, padding-top, padding-bottom, opacity;
+        -webkit-transition-duration: 800ms;
+             -o-transition-duration: 800ms;
+                transition-duration: 800ms;
+    }
+
+    .submenu-content.active  {
+        position: relative;
+        height: 345px;
+        margin-top: 25px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        opacity: 1;
+        -webkit-transition-property: height, margin-top, padding-top, padding-bottom, opacity;
+        -o-transition-property: height, margin-top, padding-top, padding-bottom, opacity;
+        transition-property: height, margin-top, padding-top, padding-bottom, opacity;
+        -webkit-transition-duration: 800ms;
+             -o-transition-duration: 800ms;
+                transition-duration: 800ms;
+    }
+
+    #submenu-btn::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        top: 72px;
+        left: 0;
+        background-color: rgb(217, 217, 217);
+      }
 
     .submenu-item:not(:first-child) {
       margin-top: 50px;
     }
 
     .main-title, .subtitle, .premises {
+        max-width: -webkit-fit-content;
+        max-width: -moz-fit-content;
         max-width: fit-content;
         margin-left: auto;
         margin-right: auto;
@@ -212,7 +309,10 @@
     }
 
     .premises {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .premises-img {
@@ -239,7 +339,8 @@
     }
 
     .about-buttons {
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
     
     .about-btn:not(:first-child) {
@@ -276,7 +377,8 @@
 @media (max-width: 380px){
 
     .about-btn {
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
     
     .about-title {
