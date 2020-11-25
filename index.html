@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
     <header class='header'>
-        <div class="content-wrap">
-            <nav class='navigation'>
-                <img src="img/logo.png" alt="логотип" class="img logo">
+        <div class="content-wrap wrap-for-flex">
+            <img src="img/logo.png" alt="логотип" class="img logo">
+            <button type='button' class='dropdown' id='dropdown-btn'></button>
+            <nav class='navigation' id='navigation'>
+                <div class="wrap-for-flex">
+                    <p class='phone'>+7 918 140 09 80</p>
+                    <div class="search">
+                        <input type="search" placeholder="Поиск" class="search-input">
+                        <button type="button" class='search-btn'></button>
+                    </div>
+                </div>
                 <ul class="menu">
                     <li class="menu-item submenu">
+                      <div id='submenu-btn'>
                         <a href="#" class="link text submenu-btn">Сферы применения</a>
-                        <ul class="submenu-content">
+                        <img src="img/plus.png" alt="" class='plus'>
+                      </div>
+                        <ul class="submenu-content" id='submenu-content'>
                             <li class="submenu-item"><a href="#" class='link text'>Небольшие пекарни</a></li>
                             <li class="submenu-item"><a href="#" class='link text'>Сегмент Horeca</a></li>
                             <li class="submenu-item"><a href="#" class='link text'>Массовое производство</a></li>
@@ -29,10 +41,6 @@
                     <li class="menu-item"><a href="#" class="link text">Контакты</a></li>
                     <li class="menu-item"><a href="#" class="link text">Консультация технолога</a></li>
                 </ul>
-                <div class="wrap-for-flex">
-                <p class='phone'>+7 918 140 09 80</p>
-                <button type="button" class='search-btn'></button>
-                </div>
             </nav>
         </div>    
     </header>
@@ -41,26 +49,33 @@
             <div class="content-wrap">
                 <h1 class="title main-title">Производство и<br>реализация смесей</h1>
                 <p class='text subtitle'>для хлебобулочных и кондитерских изделий</p>
+                <img src="img/eyelashes.png" alt="" class="decor decor-4">
+                <img src="img/underline.png" alt="" class="decor decor-5">
                 <div class="wrap-for-flex premises">
                     <img src="img/premises.png" alt="помещение" class='premises-img'>
                     <div class="premises-text">
-                        <p class='title promises-title'>Полезные связи и поиск помещения для пекарни</p>
-                        <p class='text promises-text'>15 сентября 2020</p>
+                        <p class='title premises-title'>Полезные связи и поиск помещения для пекарни</p>
+                        <p class='text premises-date'>15 сентября 2020</p>
                     </div>
                 </div>
             </div>
             <img src="img/grains-1.png" alt="" class="decor decor-1">
             <img src="img/grains-2.png" alt="" class="decor decor-2">
-            <img src="img/grains-4.png" alt="" class="decor decor-4">
+            <img src="img/grains-3.png" alt="" class="decor decor-3">
         </section>
         <section class='about-section'>
             <div class="content-wrap">
+                <div class="slicing">
+                    <img src="img/rolling-pin.png" alt="" class="decor rollingPin">
+                    <img src="img/shadow.png" alt="" class="decor decor-6">
+                    <div class="slicing-photo"></div>
+                </div>
                 <div class='about-content'>
                   <h2 class="title about-title">Качество, вкус и натуральность -  вот составляющие наших рецептов и успеха</h2>
                   <p class="text about-text">ТМ «LAVAKON MIX» производит хлебопекарные и кондитерские смеси, разработанные ведущими европейскими технологами, адаптированные к условиям российских производителей опытнейшей группой производственных экспертов, зарекомендовавших себя в крупнейших компаниях России!</p>
                   <div class='wrap-for-flex about-buttons'>
-                    <button type="button" class="wrap-for-flex about-btn"><img src="img/photo.png" alt="иконка" class="about-btn-img"><span class="title about-btn-text">Фотографии</span></button>
-                    <button type="button" class="wrap-for-flex about-btn"><img src="img/video.png" alt="иконка" class="about-btn-img"><span class="title about-btn-text">Видео</span></button>
+                    <a href='#' class="wrap-for-flex about-btn"><img src="img/photo.png" alt="иконка" class="about-btn-img"><span class="title about-btn-text">Фотографии</span></a>
+                    <a href='#' class="wrap-for-flex about-btn"><img src="img/video.png" alt="иконка" class="about-btn-img"><span class="title about-btn-text">Видео</span></a>
                   </div>
                 </div>
             </div>

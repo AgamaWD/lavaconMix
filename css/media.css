@@ -1,0 +1,290 @@
+@media (max-width: 1620px){
+	.decor-1, .decor-2 {
+        display: none;
+    }
+}
+
+@media (max-width: 1500px) {
+    .rollingPin {display: none;}
+}
+
+@media (max-width: 1440px){
+	.main-section {
+        background: url('../img/bg.png') no-repeat bottom center;
+        background-size: cover;
+    }
+
+    .decor-4 {display: none;}
+
+    .menu-item {
+        margin-right: 40px;
+      }
+}
+
+@media (max-width: 1300px){
+	.menu-item {
+        margin-right: 35px;
+      }
+    .search-btn {
+        margin-left: 15px;
+    }
+    .phone {
+        font-size: 16px;
+    }
+    .slicing {
+        left: 0;
+    }
+}
+
+@media (max-width: 1220px){
+	.menu-item {
+        margin-right: 20px;
+      }
+}
+
+@media (max-width: 1130px){
+    .header>div {
+        display: block;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-item {
+        margin: 0;
+    }
+
+    .navigation>div {
+        justify-content: flex-end;
+        margin-bottom: 30px;
+    }
+
+    .logo {
+        position: absolute;
+        top: -10px;
+    }
+    .slicing {
+        width: 326px;
+    }
+
+    .slicing-photo {
+      background-position: 20% center;
+    }
+
+    .decor-6 {
+        width: 306px;
+        bottom: -19px;
+    }
+}
+
+@media (max-width: 1010px){
+    .about-content {
+        float: none;
+        margin: 0 auto;
+    }
+
+	.slicing {
+        display: none;
+    }
+
+}
+@media (max-width: 750px){
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 12px 0;
+        z-index: 1;
+    }
+
+    .logo {
+        position: relative;
+        top: 0;
+        left: 10px;
+        z-index: 30;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        min-height: 100%;
+        padding-top: 98px;
+        z-index: 10;
+        background-color: rgb(255,255,255);
+        display: none;
+    }
+
+    .navigation.active {
+        display: block;
+    }
+
+    .navigation>div {
+        display: block;
+        margin: 0;
+    }
+
+    .phone {
+        border-top: 2px solid rgb(217, 217, 217);
+        border-bottom: 2px solid rgb(217, 217, 217);
+        padding: 25px 30px 20px;
+    }
+
+    .search {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 23px 30px;
+        align-items: center;
+    }
+
+    .search-input  {
+        display: block;
+        padding: 0;
+        border: 0;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu-item {
+        border-top: 2px solid rgb(217, 217, 217);
+        padding: 30px 30px 25px;
+    }
+
+    .submenu {
+        position: relative;
+    }
+
+    .plus {
+        display: block;
+    }
+
+    .submenu-content  {
+        position: relative;
+        margin-top: 25px;
+        padding: 30px 0px 30px 30px;
+    }
+
+    .submenu-item:not(:first-child) {
+      margin-top: 50px;
+    }
+
+    .main-title, .subtitle, .premises {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-section {
+        padding: 144px 0 70px;
+        background-position: left bottom;
+    }
+    
+}
+
+@media (max-width: 550px){
+    .main-title {
+        font-size: 104px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .decor-5 {
+        display: none;
+    }
+
+    .premises {
+        flex-direction: column;
+    }
+
+    .premises-img {
+        width: 80%;
+    }
+
+    .premises-text {
+        margin-top: 30px;
+        width: 80%;
+    }
+
+    .premises-title {
+        margin-bottom: 0;
+    }
+
+    .about-title {
+        font-size: 56px;
+        line-height: 0.8em;
+    }
+
+    .about-text {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    .about-buttons {
+        justify-content: space-around;
+    }
+    
+    .about-btn:not(:first-child) {
+        margin-left: 0;
+    }
+  
+}
+
+@media (max-width: 440px){
+
+    
+    .about-section {
+        padding: 20px 0;
+    }
+
+    .main-title {
+        font-size: 75px;
+        margin-left: 20px;
+    }
+
+    .subtitle {
+        margin: 10px 0 0 20px;
+    }
+
+    .about-title {
+        font-size: 47px;
+    }
+
+    .about-btn-text {
+        font-size: 33px;
+    }
+}
+
+@media (max-width: 380px){
+
+    .about-btn {
+        justify-content: space-around;
+    }
+    
+    .about-title {
+        line-height: 0.65em;
+    } 
+    
+    .about-btn-img {
+        width: 45px;
+    }
+
+}

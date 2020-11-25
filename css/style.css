@@ -6,6 +6,7 @@ body {
     max-width: 1320px;
     padding: 0 20px;
     margin: 0 auto;
+    position: relative;
 }
 
 .title {
@@ -28,7 +29,8 @@ body {
 .link:hover, 
 .link:active {
    color: rgb(221, 98, 19);
-   text-decoration: underline dotted;
+   border-bottom: 3px dotted rgb(221, 98, 19);
+   padding-bottom: 8px;
 }
 
 button {
@@ -39,7 +41,7 @@ button {
 
 .header {
     padding: 18px 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .navigation, .menu, .wrap-for-flex {
@@ -49,38 +51,71 @@ button {
   align-items: center;
 }
 
-.menu-item:not(:first-child) {
-  margin-left: 40px;
+.navigation {
+    flex-direction: row-reverse;
+}
+
+.dropdown {
+    background: url('../img/open-menu.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 42px;
+    height: 42px;
+    position: fixed;
+    right: 30px;
+    top: 15px;
+    display: none;
+}
+
+.dropdown.open {
+    background-image: url('../img/close.png');
+    top: 25px;
+    width: 22px;
+    height: 22px;
+    z-index: 20;
+}
+
+.menu-item {
+  margin-right: 45px;
 }
 
 .submenu-btn {
     position: relative;
     color: rgb(82, 51, 0);
-    text-decoration: none;
     font-size: 16px;
+}
+
+.plus {
+    position: absolute;
+    right: 28px;
+    top: 27px;
+    display: none;
 }
 
 .submenu-content {
   position: absolute;
   display: none;
+  z-index: 10;
+}
+
+.submenu-content.active {
+  display: block;
 }
 
 .submenu-item {
   margin-top: 10px;
 }
 
-.submenu:hover .submenu-content {
-  display: block;
-}
-
-.submenu-content a:hover {
-    text-decoration: none;
+.submenu-item:hover .link {
+   border: none;
   }
-
 
 .phone {
     font-family: 'Gotham Pro Bold';
     font-size: 18px;
+}
+
+.search-input {
+    display: none;
 }
 
 .search-btn {
@@ -96,10 +131,11 @@ button {
 }
 
 .main-section {
-    background: url('../img/top-bg.png') no-repeat;
-    background-size: 100% 100%;
+    background: url('../img/bg1.png') no-repeat bottom center;
+    background-size: 100% 110%;
     padding: 110px 0 110px;
     position: relative;
+    overflow: hidden;
 }
 
 .main-title {
@@ -126,12 +162,12 @@ button {
     width: 270px;
 }
 
-.promises-title {
+.premises-title {
     font-size: 42px;
     margin-bottom: 18px;
 }
 
-.promises-text {
+.premises-date {
     font-size: 14px;
 }
 
@@ -140,27 +176,69 @@ button {
 }
 
 .decor-1 {
-    top: -96px;
-    left: 48px;
+    top: -38px;
+    left: 0;
 }
 
 .decor-2 {
-    top: 328px;
-    left: -184px;
+    top: 249px;
+    left: 0;
+}
+
+.decor-3 {
+    top: -190px;
+    right: -165px;
 }
 
 .decor-4 {
-    top: 0;
-    right: 0;
-} 
+    top: 18px;
+    left: -43px;
+}
+
+.decor-5 {
+    top: 171px;
+    left: 69px;
+}
 
 .about-section {
-    overflow: hidden;
     padding: 70px 0;
 }
 
+.slicing {
+    position: relative;
+    top: -106px;
+    left: 77px;
+    width: 426px;
+    height: 509px;
+    display: inline-block;
+}
+
+.slicing-photo {
+    width: 100%;
+    height: 100%;
+    background: url('../img/slicing.png') no-repeat left center;
+    background-size: cover;
+    border: 5px solid rgb(255, 255, 255);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    box-shadow: 9px -7px 24px 9px rgba(82, 51, 0, 0.11);
+}
+
+.decor-6 {
+  left: 9px;
+  bottom: -25px;
+}
+
+.rollingPin {
+    top: 39px;
+    left: -383px;
+}
+
 .about-content {
-    width: 533px;
+    max-width: 533px;
     float: right;
     margin-right: 89px;
 }
@@ -180,6 +258,10 @@ button {
     justify-content: start;
 }
 
+.about-btn:hover .about-btn-img {
+    opacity: 0.6;
+}
+
 .about-btn:not(:first-child) {
     margin-left: 102px;
 }
@@ -189,4 +271,5 @@ button {
     line-height: 100%;
     margin-left: 20px;
     height: 100%;
+    color: rgb(82, 51, 0);
 }
